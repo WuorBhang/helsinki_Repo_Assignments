@@ -1,0 +1,30 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    
+    User->>Browser: Navigate to /spa
+    Browser->>Server: GET /spa
+    activate Server
+    Server-->>Browser: HTML document
+    deactivate Server
+    
+    Browser->>Server: GET /main.css
+    activate Server
+    Server-->>Browser: CSS file
+    deactivate Server
+    
+    Browser->>Server: GET /spa.js
+    activate Server
+    Server-->>Browser: JavaScript file (spa.js)
+    deactivate Server
+    
+    Note right of Browser: Browser executes JavaScript<br/>which fetches JSON data
+    
+    Browser->>Server: GET /data.json
+    activate Server
+    Server-->>Browser: JSON data with all notes
+    deactivate Server
+    
+    Note right of Browser: Browser executes callback function<br/>to render notes using DOM
+    Browser->>User: Display notes page

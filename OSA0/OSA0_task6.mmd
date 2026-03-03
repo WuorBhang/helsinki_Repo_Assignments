@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant User
+    participant Browser
+    participant JavaScript
+    participant Server
+    
+    User->>Browser: Enter note text and click Save
+    Browser->>JavaScript: Form submit event triggered
+    JavaScript->>JavaScript: e.preventDefault() - stop page reload
+    JavaScript->>JavaScript: Create note object with content & date
+    
+    Note right of JavaScript: Update UI immediately<br/>(no waiting for server)
+    JavaScript->>Browser: Add note to notes array
+    JavaScript->>Browser: Redraw notes list (DOM manipulation)
+    Browser->>User: Show new note immediately
+    
+    JavaScript->>Server: POST /new_note_spa (JSON data)
+    activate Server
+    Server->>Server: Save note to memory
+    Server-->>JavaScript: 201 Created
+    deactivate Server
+    
+    Note right of Browser: Page never reloads!<br/>Only 1 HTTP request made
