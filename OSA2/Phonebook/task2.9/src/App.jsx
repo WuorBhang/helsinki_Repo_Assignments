@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Names } from "./components/Name";
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { name: "Wuor Bhang", number: "0701234516" },
-    { name: "Henry Chuol", number: "+211924323523" },
-    { name: "Deng Gatluak", number: "0790234345" },
-    { name: "Mary Nyanaath", number: "01126423122" },
+    { name: "Arto Hellas", number: "040-123456", id: 1 },
+    { name: "Ada Lovelace", number: "39-44-5323523", id: 2 },
+    { name: "Dan Abramov", number: "12-43-234345", id: 3 },
+    { name: "Mary Poppendieck", number: "39-23-6423122", id: 4 },
   ]);
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
@@ -18,10 +19,17 @@ const App = () => {
       alert(`${newName} is already added to phonebook`);
       return;
     }
+    if (persons.some((person) => person.number === newNumber)) {
+      alert(
+        `The Number ${newNumber} already exists in phonebook with name ${persons.find((person) => person.number === newNumber).name}`,
+      );
+      return;
+    }
 
     const personObject = {
       name: newName,
       number: newNumber,
+      id: persons.length + 1,
     };
     setPersons(persons.concat(personObject));
     setNewName("");

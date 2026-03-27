@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Names } from "./components/Name";
 
 const App = () => {
   const [persons, setPersons] = useState([
@@ -12,6 +13,12 @@ const App = () => {
 
     if (persons.some((person) => person.name === newName)) {
       alert(`${newName} is already added to phonebook`);
+      return;
+    }
+    if (persons.some((person) => person.number === newNumber)) {
+      alert(
+        `The Number ${newNumber} already exists in phonebook with name ${persons.find((person) => person.number === newNumber).name}`,
+      );
       return;
     }
 
