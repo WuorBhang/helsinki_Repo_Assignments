@@ -1,0 +1,65 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "040-123456",
+      "id": "1"
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": "2"
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": "3"
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": "4"
+    },
+    {
+      "id": "-JlI0yYGS_E",
+      "name": "Wuor Bhang",
+      "number": "0928273"
+    },
+    {
+      "id": "zzTVn7l23Zc",
+      "name": "Last Testing",
+      "number": "12345322"
+    },
+    {
+      "id": "MBvHmpWFiJU",
+      "name": "Ombeni Techer",
+      "number": "9271919"
+    },
+    {
+      "id": "9M_g36UcLgY",
+      "name": "Ramaz",
+      "number": "9371910"
+    },
+    {
+      "id": "wqUstn4oXjs",
+      "name": "henry Abdi",
+      "number": "8362829"
+    },
+    {
+      "id": "Skplm_Tio1w",
+      "name": "Duol Daniel",
+      "number": "85939204"
+    },
+    {
+      "name": "Babu Wuri",
+      "number": "123",
+      "id": "TjoMztjydA0"
+    },
+    {
+      "name": "Techno kakuma",
+      "number": "1234321",
+      "id": "ti7uEZNf7h0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

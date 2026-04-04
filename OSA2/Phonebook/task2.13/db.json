@@ -1,0 +1,40 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "040-123456",
+      "id": "1"
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": "2"
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": "3"
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": "4"
+    },
+    {
+      "id": "-JlI0yYGS_E",
+      "name": "Wuor Bhang",
+      "number": "0928273"
+    },
+    {
+      "id": "AEWNawEoGDs",
+      "name": "Hello Test",
+      "number": "074628293"
+    },
+    {
+      "id": "zzTVn7l23Zc",
+      "name": "Last Testing",
+      "number": "12345322"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
